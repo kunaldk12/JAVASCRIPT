@@ -1,0 +1,31 @@
+<html> 
+ <head> 
+ <title>Experiment2</title> 
+ <meta charset="UTF-8"> 
+ <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+ </head> 
+ <body> 
+ <h1>Experiment No.2</h1> 
+ <br> 
+ <br> 
+ <h2> multiplication Table </h2> 
+ <label>Enter Number</label> 
+ <input type ="number" id ="Number"> 
+ <br> 
+ <br> 
+ <input type="button" value="submit" onclick="multiplicationtable()"> 
+ <br><br> 
+ <h4 id="table"></h4> 
+ <script> 
+ function multiplicationtable(){ 
+ var n =parseInt(document.getElementById("Number").value); 
+ var s =""; 
+ for( var i=1; i<=10; i++) 
+ { 
+ s=s+n+"X"+i+"="+n*i+"<br>"; 
+ } 
+ document.getElementById("table").innerHTML=s; 
+ } 
+ </script> 
+ </body> 
+</html>

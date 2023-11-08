@@ -1,0 +1,42 @@
+<html> 
+ <head> 
+ <title>Experiment 7</title> 
+ <meta charset="UTF-8"> 
+ <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+ </head> 
+ <body> 
+ <h1>Object Operations</h1> 
+ <label for="objectName">Enter an Name:</label> 
+ <input type="text" id="objectName"> 
+ <label for="objectAge">Enter an Age:</label> 
+ <input type="number" id="object> 
+ <button onclick="appendToArray()">Append to Array</button> 
+ <button onclick="checkarray()">Check</button> 
+ <div id="output"></div> 
+ <script> 
+ // Initialize an empty array 
+ let myArray = []; 
+ // Function to append an object to the array 
+ function appendToArray() { 
+ const name = document.getElementById("objectName").value; 
+ const age = parseInt(document.getElementById("objectAge").value,10); 
+ // Parse the user input to an object (you can modify this as needed) 
+ const object = {name,age}; 
+ // Append the object to the array 
+ myArray.push(object); 
+ // Display the updated array 
+ display('Oject appended : '+ JSON.stringify(object)); 
+ } 
+ 
+ function checkarray(){ 
+ const isArray = Array.isArray(myArray); 
+ display('Is the object an array? ' + (isArray ? 'Yes' : 'No')); 
+ } 
+ function display(message) { 
+ document.getElementById('output').innerHTML=message; 
+ 
+ } 
+ </script> 
+ </body> 
+</html> 
+

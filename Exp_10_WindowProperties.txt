@@ -1,0 +1,75 @@
+<html> 
+<head> 
+ <title>Window and Document Properties</title> 
+ <style> 
+ body { font-family: Arial, sans-serif; text-align: center; padding: 20px; 
+background-color: #f0f0f0; } 
+ .container { max-width: 800px; margin: 0 auto; padding: 20px; background-color: #fff; border-radius: 10px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); } 
+ .property-container { display: flex; flex-wrap: wrap; justify-content: center; } 
+ .property-item { width: 45%; margin: 10px; padding: 20px; border: 1px solid 
+#ccc; border-radius: 10px; text-align: left; background-color: #f9f9f9; } 
+ .property-item h3 { margin-top: 0; } 
+ .property-item ul { list-style: none; padding: 0; } 
+ .property-item li { margin-bottom: 5px; } 
+ .property-item li strong { font-weight: bold; margin-right: 5px; } 
+ .button-container { display: flex; justify-content: space-around; margin-top: 
+20px; } 
+ .button-container button { padding: 10px 20px; font-size: 16px; margin: 5px; 
+cursor: pointer; background-color: #4CAF50; color: white; border: none; 
+border-radius: 5px; } 
+ .button-container button:hover { background-color: #45a049; } 
+ </style> 
+</head> 
+<body> 
+<h1>Window and Document Properties</h1> 
+<div class="container"> 
+ <div class="property-container"> 
+ <div class="property-item"> 
+ <h3>Window Properties</h3> 
+ <ul> 
+ <li><strong>window.innerWidth:</strong> <span 
+id="innerWidth"></span></li> 
+ <li><strong>window.innerHeight:</strong> <span 
+id="innerHeight"></span></li> 
+ <li><strong>window.outerWidth:</strong> <span 
+id="outerWidth"></span></li> 
+ <li><strong>window.outerHeight:</strong> <span 
+id="outerHeight"></span></li> 
+ <li><strong>window.screen.width:</strong> <span 
+id="screenWidth"></span></li> 
+ <li><strong>window.screen.height:</strong> <span 
+id="screenHeight"></span></li> 
+ <li><strong>window.location.href:</strong> <span 
+id="locationHref"></span></li> 
+ <li><strong>window.navigator.userAgent:</strong> <span 
+id="userAgent"></span></li> 
+ </ul> 
+ </div> 
+ <div class="property-item"> 
+ <h3>Document Methods</h3> 
+ <div class="button-container"> 
+ <button onclick="openNewTab()">Open New Tab</button> 
+ <button onclick="scrollToTop()">Scroll to Top</button> 
+ <button onclick="scrollToBottom()">Scroll to Bottom</button> 
+ </div> 
+ </div> 
+ </div> 
+</div> 
+<script> 
+ document.getElementById('innerWidth').innerText = window.innerWidth; 
+ document.getElementById('innerHeight').innerText = window.innerHeight; 
+ document.getElementById('outerWidth').innerText = window.outerWidth; 
+ document.getElementById('outerHeight').innerText = window.outerHeight; 
+ document.getElementById('screenWidth').innerText = window.screen.width; 
+ document.getElementById('screenHeight').innerText = window.screen.height; 
+ document.getElementById('locationHref').innerText = window.location.href; 
+ document.getElementById('userAgent').innerText = 
+window.navigator.userAgent; 
+ function openNewTab() { window.open('https://www.example.com', '_blank'); 
+} 
+ function scrollToTop() { document.documentElement.scrollTop = 0; } 
+ function scrollToBottom() { document.documentElement.scrollTop = 
+document.documentElement.scrollHeight; } 
+</script> 
+</body> 
+</html>

@@ -1,0 +1,67 @@
+<html> 
+<head> 
+<title>Area Calculator</title> 
+</head> 
+<body> 
+<h1>Area Calculator</h1>
+
+<div> 
+ <label for="triangleBase">Base of Triangle:</label> 
+ <input type="number" id="triangleBase" placeholder="Enter base"> 
+ <label for="triangleHeight">Height of Triangle:</label> 
+ <input type="number" id="triangleHeight" placeholder="Enter height"> 
+ <button onclick="calculateTriangleArea()">Calculate Triangle Area</button> 
+ <p id="triangleArea"></p> 
+</div>
+
+<div> 
+ <label for="rectangleLength">Length of Rectangle:</label> 
+ <input type="number" id="rectangleLength" placeholder="Enter length"> 
+ <label for="rectangleWidth">Width of Rectangle:</label> 
+ <input type="number" id="rectangleWidth" placeholder="Enter width"> 
+ <button onclick="calculateRectangleArea()">Calculate Rectangle Area</button> 
+ <p id="rectangleArea"></p> 
+</div>
+
+<div> 
+ <label for="circleRadius">Radius of Circle:</label> 
+ <input type="number" id="circleRadius" placeholder="Enter radius"> 
+ <button onclick="calculateCircleArea()">Calculate Circle Area</button> 
+ <p id="circleArea"></p> 
+</div> 
+
+<script> 
+ function calculateTriangleArea() { 
+ const base = parseFloat(document.getElementById('triangleBase').value); 
+ const height = parseFloat(document.getElementById('triangleHeight').value); 
+ if (isNaN(base) || isNaN(height) || base <= 0 || height <= 0) { 
+ document.getElementById('triangleArea').innerText = 'Please enter valid base and height.'; 
+ } 
+ else { 
+ const area = 0.5 * base * height; 
+ document.getElementById('triangleArea').innerText = 'Area of Triangle: ' + area.toFixed(2); 
+ } 
+ } 
+ function calculateRectangleArea() { 
+ const length = parseFloat(document.getElementById('rectangleLength').value); 
+ const width = parseFloat(document.getElementById('rectangleWidth').value); 
+ if (isNaN(length) || isNaN(width) || length <= 0 || width <= 0) { 
+ document.getElementById('rectangleArea').innerText = 'Please enter valid length and width.'; 
+ } 
+ else { 
+ const area = length * width; 
+ document.getElementById('rectangleArea').innerText = 'Area of Rectangle:' + area.toFixed(2); 
+ } 
+ } 
+ function calculateCircleArea() { 
+ const radius = parseFloat(document.getElementById('circleRadius').value); 
+ if (isNaN(radius) || radius <= 0) { 
+ document.getElementById('circleArea').innerText = 'Please enter valid radius.'; 
+ } else { 
+ const area = Math.PI * radius * radius; 
+ document.getElementById('circleArea').innerText = 'Area of Circle: ' + area.toFixed(2); 
+ } 
+ } 
+</script> 
+</body> 
+</html>
